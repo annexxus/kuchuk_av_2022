@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<style>
+  body {
+
+   background-color: #c7b39b;
+   background-size: cover;
+   }
+</style>
+
+<div class="container">
+<h1><code>{{ project.title }}</code></h1>
+<div class="row">
+    <div class="col-md-8">
+      <img src="{% static project.image %}" alt="" width="100%">
+    </div>
+    <div class="col-md-4">
+        <h3><code>О проекте:</code></h3>
+        <p>{{ project.description }}</p>
+        <br>
+        <h3><code>Технологии:</code></h3>
+        <p>{{ project.technology }}</p>
+    </div>
+</div>
+</div>
+{% endblock %}
